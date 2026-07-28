@@ -1,25 +1,3 @@
-
-```svg
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="180" viewBox="0 0 900 180">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a0a"/>
-      <stop offset="100%" style="stop-color:#1a1008"/>
-    </linearGradient>
-    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#e87a20;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#e87a20;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#e87a20;stop-opacity:0"/>
-    </linearGradient>
-  </defs>
-  <rect width="900" height="180" fill="url(#bg)"/>
-  <rect x="0" y="170" width="900" height="2" fill="url(#line)"/>
-  <text x="450" y="80" font-family="Impact, Arial Black" font-size="56" fill="#ff9a3a" text-anchor="middle" letter-spacing="4">BLACK OPS II</text>
-  <text x="450" y="120" font-family="Segoe UI, Arial" font-size="18" fill="#6a5a4a" text-anchor="middle" letter-spacing="8">MOD MANAGER</text>
-  <text x="450" y="150" font-family="Consolas, monospace" font-size="12" fill="#3a3020" text-anchor="middle">PLUTONIUM T6  //  v2.0</text>
-</svg>
-```
-
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D4?style=flat-square&logo=windows&logoColor=white"/>
   <img src="https://img.shields.io/badge/Games-Black%20Ops%20II%20%7C%20Plutonium-e87a20?style=flat-square"/>
@@ -30,7 +8,7 @@
 
 ---
 
-A desktop application for managing and deploying custom mods for **Call of Duty: Black Ops II** on the **Plutonium** platform. No more dragging folders around or losing track of which mod is active. Point, click, deploy, launch.
+A desktop application for managing and deploying custom mods for **Call of Duty: Black Ops II** on the **Plutonium** platform. No more dragging folders around or losing track of which mod is active , manually copy scripts and images over and over. now : Point, click, deploy, launch.
 
 ---
 
@@ -81,14 +59,14 @@ A desktop application for managing and deploying custom mods for **Call of Duty:
 
 ### Option 1: Portable EXE (Recommended)
 
-1. Download `BO2ModManager.exe` from the [Releases](https://github.com/yourusername/bo2-mod-manager/releases) page
+1. Download `BO2ModManager.exe` from the [Releases](https://github.com/codeBySherwan/bo2-mod-manager/releases) page
 2. Drop it anywhere — USB drive, desktop, game folder — it just works
 3. Run it
 
 ### Option 2: From Source
 
 ```batch
-git clone https://github.com/yourusername/bo2-mod-manager.git
+git clone https://github.com/codeBySherwan/bo2-mod-manager.git
 cd bo2-mod-manager
 pip install PyQt6
 python bo2_mod_manager.py
@@ -120,7 +98,11 @@ Exe:     %localappdata%\Plutonium\bin\plutonium-launcher-win32.exe
 ## Screenshots
 
 <p align="center">
-  <i>(Screenshots coming soon)</i>
+  <img width="1122" height="987" alt="image" src="https://github.com/user-attachments/assets/a545d904-da23-455b-b207-6d73f56b1d79" />
+  <img width="1124" height="1008" alt="image" src="https://github.com/user-attachments/assets/846c495e-a05f-4005-93cf-707a15eda056" />
+
+
+
 </p>
 
 ---
@@ -130,7 +112,7 @@ Exe:     %localappdata%\Plutonium\bin\plutonium-launcher-win32.exe
 1. **Scan** — The app reads your `MyMods` directory and checks each folder for `scripts/mp` or `scripts/zm` subdirectories
 2. **Preview** — When you click a mod, it loads `Preview.png` and reads `readme.txt` from that mod's folder
 3. **Deploy** — Copies the mod's scripts to `t6/scripts/mp` (or `zm`) and merges its images into `t6/images`. Any previously deployed mod for that mode is wiped clean beforehand
-4. **Launch** — Fires the game executable in its own directory so Plutonium picks it up correctly
+4. **Launch** — Fires the game executable in its own directory so Plutonium picks it up correctly 
 
 ---
 
@@ -160,7 +142,7 @@ You can edit it manually, but the app manages everything through the UI.
 
 ## Theming
 
-The stylesheet is built from a single template with color tokens. Each theme is a dictionary of ~20 tokens (background, panel, card, accent, text, border, success, danger — each with variants). Adding a new theme is as simple as dropping in a new token set and adding it to `THEME_ORDER`.
+The stylesheet is built from a single template with colour tokens. Each theme is a dictionary of ~20 tokens (background, panel, card, accent, text, border, success, danger — each with variants). Adding a new theme is as simple as dropping in a new token set and adding it to `THEME_ORDER`.
 
 ---
 
