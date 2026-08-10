@@ -69,10 +69,12 @@ A desktop application for managing and deploying custom mods for **Call of Duty:
 git clone https://github.com/codeBySherwan/bo2-mod-manager.git
 cd bo2-mod-manager
 pip install PyQt6
-python bo2_mod_manager.py
+python run.py
 ```
 
-Requires Python 3.10+ and PyQt6.
+(Or `python -m bo2_mod_manager` — equivalent.)
+
+Requires Python 3.10+ and PyQt6. QtWebEngine is optional; without it the auto-fetch falls back to manual entry.
 
 ---
 
@@ -150,10 +152,13 @@ The stylesheet is built from a single template with colour tokens. Each theme is
 
 ```batch
 pip install pyinstaller
-pyinstaller --onefile --noconsole --name "BO2ModManager" --icon icon.ico bo2_mod_manager.py
+pyinstaller --onefile --noconsole --name "BO2ModManager" --icon icon.ico `
+    --collect-all PyQt6.QtWebEngineCore --collect-all PyQt6.QtWebEngineWidgets run.py
 ```
 
-Output lands in `dist/BO2ModManager.exe` — a fully self-contained portable binary.
+`--collect-all` for the two WebEngine modules is required so the embedded
+browser keeps working inside the packed exe. Output lands in
+`dist/BO2ModManager.exe` — a fully self-contained portable binary.
 
 ---
 
